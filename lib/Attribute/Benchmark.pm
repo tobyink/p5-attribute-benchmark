@@ -11,7 +11,7 @@ our $AUTHORITY = 'cpan:TOBYINK';
 our $VERSION   = '0.001';
 
 my %cmp  = ();
-my $iter = -1;
+my $iter = -3;
 END { Benchmark::cmpthese($iter, \%cmp) if keys %cmp };
 
 sub import
@@ -70,7 +70,7 @@ add the C<:Benchmark> attribute to each. Then run your script.
 No need to C<use strict> or C<use warnings> - Attribute::Benchmark
 does that for you.
 
-By default Attribute::Benchmark uses C<< cmpthese(-1, \%subs) >> but
+By default Attribute::Benchmark uses C<< cmpthese(-3, \%subs) >> but
 the iteration count can be changed in the import statement:
 
    use Attribute::Benchmark (100);
