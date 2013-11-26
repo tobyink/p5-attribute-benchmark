@@ -67,6 +67,9 @@ B<Attribute::Benchmark> provides a C<:Benchmark> attribute for subs.
 Just import it into a script, write the subs you wish to compare, and
 add the C<:Benchmark> attribute to each. Then run your script.
 
+No need to C<use strict> or C<use warnings> - Attribute::Benchmark
+does that for you.
+
 By default Attribute::Benchmark uses C<< cmpthese(-1, \%subs) >> but
 the iteration count can be changed in the import statement:
 
